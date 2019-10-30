@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+        .mainmenubtn {
+
+        background-color: #669999;
+        margin-top:0px;
+        width: 200px;
+        border: 5px solid black;
+        padding: 10px;
+        color:#ffff00;
+        font-size:10px;
+        font-weight: bold;
+}
+.mainmenubtn:hover {
+    background-color: #669999;
+
+    }
+
+.dropdown {
+
+    display: inline-block;
+
+}
+.dropdown-child {
+    display: inline;
+    background-color: #47476b;
+    min-width: 200px;
+
+}
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+</style>
+
+
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHƯƠNG ÁN 1 <br> Import to NectAct</button>
+  <div class="dropdown-child">
+    <a href="{% url 'simple_upload'%}">Upload CDD File</a>
+    <a href="{% url 'model_form_upload'%}">Upload PCM File</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHƯƠNG ÁN 2 <br>TDM-COMMAND</button>
+  <div class="dropdown-child">
+    <a href="{% url 'model_form_upload'%}">Upload CDD File</a>
+    <a href="{% url 'model_form_upload'%}">Upload PCM File</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHƯƠNG ÁN 3<br>AoIP-IP-COMMAND</button>
+  <div class="dropdown-child">
+    <a href="{% url 'model_form_upload'%}">Upload CDD File</a>
+    <a href="{% url 'model_form_upload'%}">Upload PCM File</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHƯƠNG ÁN 4<br>AoIP-TDM-COMMAND</button>
+  <div class="dropdown-child">
+    <a href=href="{% url 'model_form_upload'%}">Upload CDD File</a>
+    <a href="{% url 'model_form_upload'%}">Upload PCM File</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHƯƠNG ÁN 5<br>TDM-BIỂN ĐẢO-COMMAND</button>
+  <div class="dropdown-child">
+    <a href="{% url 'model_form_upload'%}">Upload CDD File</a>
+    <a href="{% url 'model_form_upload'%}">Upload PCM File</a>
+  </div>
+</div>
+
+{% endblock %}

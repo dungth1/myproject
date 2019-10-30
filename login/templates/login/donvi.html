@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+        .mainmenubtn {
+        display: flex;
+        align-items: center;
+        background-color: #669999;
+        margin-top:0px;
+        margin-left:20px;
+        width: 500px;
+        border: 5px solid black;
+        padding: 20px;
+        color:#ffff00;
+        font-size:20px;
+        font-weight: bold;
+}
+.mainmenubtn:hover {
+    background-color: #669999;
+
+    }
+
+.dropdown {
+
+    display: inline-block;
+
+}
+.dropdown-child {
+    display: inline;
+    background-color: #47476b;
+    min-width: 200px;
+
+}
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+
+
+
+</style>
+
+<div id="menu">
+  <ul>
+
+    <li id ="didong"><a href="{% url 'login'%}">PHÒNG DI ĐỘNG</a></li>
+    <li id="tktu"><a href="{% url 'login'%}">PHÒNG THIẾT KẾ TỐI ƯU</a></li>
+    <li id="dhml"><a href="{% url 'login'%}">PHÒNG ĐIỀU HÀNH MẠNG LƯỚI</a></li>
+
+  </ul>
+
+</div>
+
+
+{% endblock %}

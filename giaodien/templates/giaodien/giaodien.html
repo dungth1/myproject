@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN USER</title>
+</head>
+<STYLE>
+
+p {
+    color: #ff0000;
+    font-size:20px;
+    font-weight: bold;
+}
+
+
+    #menu ul{
+list-style-type:none;
+padding:0px;
+margin:0px;
+}
+
+/* dòng lệnh này để căn cho menu nằm ngang*/
+#menu ul li{
+display:block;
+}
+
+#menu ul a{
+text-decoration:none;
+width:150px;
+float:left;
+background:blue;
+color:red;
+font-weight:bold;
+text-align:center;
+line-height:35px;
+border-left:1px solid #fff;
+
+}
+
+</STYLE>
+<body>
+
+<div id="menu">
+
+ <ul>
+ <li><a href="{% url 'login' %}">LOGIN</a></li>
+<p align="center" > PHƯƠNG ÁN ỨNG CỨU THÔNG TIN BSC NOKIA</p>
+
+ </ul>
+
+
+
+</div>
+
+</body>
+</html>

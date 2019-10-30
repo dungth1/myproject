@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}<p>
+    Đăng nhập thành công: {{user_name}} , {{user_phong}}
+<!--
+    <li><a href="{% url 'phuongan'%}">Bắt đầu upload files</a></li>
+    -->
+    <li><a href="{% url 'tutorial_list' %}">Click here to continue</a></li>
+</p>
+{% endblock %}

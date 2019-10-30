@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+   #menu ul{
+list-style-type:none;
+padding:0px;
+margin:0px;
+}
+
+/* dòng lệnh này để căn cho menu nằm ngang*/
+#menu ul li{
+display:block;
+}
+
+#menu ul a{
+text-decoration:none;
+width:250px;
+float:left;
+background:#999594;
+color:green;
+font-weight:bold;
+text-align:center;
+line-height:35px;
+border-left:1px solid #fff;
+
+}
+</style>
+
+
+<div id="menu">
+
+ <ul>
+    <a href="{% url 'model_form_didong'%}">PHƯƠNG ÁN 1 <br> Import to NectAct</a>
+    <a href="{% url 'model_form_didong'%}">PHƯƠNG ÁN 2 <br>TDM-COMMAND</a>
+    <a href="{% url 'model_form_didong'%}">PHƯƠNG ÁN 3<br>AoIP-IP-COMMAND</a>
+    <a href="{% url 'model_form_didong'%}">PHƯƠNG ÁN 4<br>AoIP-TDM-COMMAND</a>
+    <a href="{% url 'model_form_didong'%}">PHƯƠNG ÁN 5<br>TDM-BIỂN ĐẢO-COMMAND</a>
+
+
+ </ul>
+</div>
+
+
+
+{% endblock %}

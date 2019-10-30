@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/tutorial.css' %}">
+
+
+
+
+<a href="{% url 'upload_tutorial' %}">CLICK HERE TO UPLOAD FILE</a>
+
+{% if tutorials %}
+<table style="margin: 20px;">
+	<thead>
+		<tr>
+			<!--
+			<th>Feature Image</th>
+
+			<th>Title</th>
+
+			<th>Category</th>
+			-->
+			<th>Phòng</th>
+			<th>Loại file</th>
+			<th>Phương án</th>
+			<th>Đường dẫn</th>
+			<th>Uploaded User</th>
+			<th>Uploaded_time</th>
+			<th>Download</th>
+			<th>Delete</th>
+            <th>Approve status</th>
+			<th>Approve</th>
+			<th>Approved by</th>
+            <th>Approved_time</th>
+
+
+		</tr>
+	</thead>
+	<tbody>
+		{% for tutorial in tutorials %}
+		<tr>
+			<!--
+			<td><img src="{{ tutorial.feature_image.url }}" width="150px"></td>
+			-->
+			<td>{{ tutorial.dept }}</td>
+			<td>{{ tutorial.category }}</td>
+            <td> {{ tutorial.phuongan }}</td>
+            <td> {{ tutorial.attachment.name }}</td>
+            <td>  {{tutorial.upload_user}} </td>
+
+			<td>
+				 <small>Uploaded at: {{ tutorial.uploaded_at }})</small>
+			</td>
+			<td><a href="{{ tutorial.attachment.url }}" target="_blank">Download</a></td>
+			<td>
+				<form method="post" action="{% url 'tutorial' tutorial.pk %}">
+					{% csrf_token %}
+					<button type="submit">Delete</button>
+				</form>
+			</td>
+			<td>  {{tutorial.approve_status}} </td>
+			<td>
+				<form method="post" action="{% url 'approveTutorial' tutorial.pk %}">
+					{% csrf_token %}
+					<button type="submit">Click to Approve</button>
+				</form>
+			</td>
+			<td>  {{tutorial.approved_user}} </td>
+
+
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+
+</style>
+<h2>KIỂM TRA THÔNG TIN ĐỂAPPROVE</h2>
+<form method="post" enctype="multipart/form-data" %}>
+	{% csrf_token %}
+
+	{{ form.as_p }}
+
+	<button type="submit" ">Click here to approve</button>
+</form>
+<br>
+
+ <li><a href="{% url 'tutorial_list'%}">Home</a></li>
+
+{% endblock %}
+

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+        .mainmenubtn {
+        display: flex;
+        align-items: center;
+        background-color: #669999;
+        margin-top:0px;
+        margin-left:20px;
+        width: 500px;
+        border: 5px solid black;
+        padding: 20px;
+        color:#ffff00;
+        font-size:20px;
+        font-weight: bold;
+}
+.mainmenubtn:hover {
+    background-color: #669999;
+
+    }
+
+.dropdown {
+
+    display: inline-block;
+
+}
+.dropdown-child {
+    display: inline;
+    background-color: #47476b;
+    min-width: 200px;
+
+}
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+
+
+
+</style>
+
+<div id="menu">
+  <ul>
+   <p> Dieu huong den day</p>
+    <!--
+    <li id ="didong"><a href="{% url 'phuongan_didong'%} ">PHÒNG DI ĐỘNG</a></li>
+    <li id="tktu"><a href="{% url 'phuongan_tktu'%}">PHÒNG THIẾT KẾ TỐI ƯU</a></li>
+    <li id="dhml"><a href="{% url 'phuongan_dhml'%}">PHÒNG ĐIỀU HÀNH MẠNG LƯỚI</a></li>
+-->
+  </ul>
+
+</div>
+
+<!--
+    <form action="/phuongan/" class="form-inline">
+      <button class="mainmenubtn" type="submit">PHÒNG DI ĐỘNG</button>
+      <button class="mainmenubtn" type="submit">PHÒNG THIẾT KẾ TỐI ƯU</button>
+      <button class="mainmenubtn" type="submit">PHÒNG ĐIỀU HÀNH MẠNG LƯỚI</button>
+    </form>
+
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHÒNG THIẾT KẾ TỐI ƯU</button>
+
+  <div class="dropdown-child">
+    <a href="{% url 'model_form_upload'%}">Upload CDD File</a>
+  </div>
+
+</div>
+
+<div class="dropdown">
+  <button class="mainmenubtn">PHÒNG ĐIỀU HÀNH MẠNG LƯỚI</button>
+
+  <div class="dropdown-child">
+    <a href="{% url 'model_form_upload'%}">Upload PCM File</a>
+  </div>
+  -->
+
+
+
+{% endblock %}
